@@ -1,0 +1,16 @@
+import discord  
+from discord.ext import commands  
+
+# Bot komutlarını başlat  
+bot = commands.Bot(command_prefix='!')  
+
+@bot.event  
+async def on_ready():  
+    print(f'{bot.user} olarak giriş yapıldı!')  
+
+@bot.command()  
+async def favori_icecek(ctx):  
+    await ctx.send('En çok sevdiğim içecek: turşu suyu!')  
+
+# Bot'un token'ını buraya ekleyin  
+bot.run('BOT_TOKENİNİ_BURAYA_YERLEŞTİR')  
